@@ -1,0 +1,50 @@
+:root {
+   --dark-bg: #000000;
+   --yellow-bg: #ffc600;
+}
+
+#nav-section {
+  background-color: var(--yellow-bg);
+  height: 50px;
+}
+
+.main-header {
+    background-color: var(--dark-bg);
+    height: 90px;
+    padding: 15px 40px !important;
+}
+
+.contact-number{
+    color: var(--yellow-bg);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+#subheader-logo {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    padding-left: 22px;
+}
+
+.main {
+    background-color: #ddf5dc;
+    height: 600px;
+}
+
+.banner {
+    background: url("../img/residential-banner.png") no-repeat;
+    background-size: contain;
+    height: 641px;
+}
+
+.main-footer{
+  background-color: var(--dark-bg);
+  margin-bottom: 100px;
+  color: #ffffff;
+}
+
+.sticky-footer {
+    background-color: var(--dark-bg) !important;
+    height: 72px;
+}
