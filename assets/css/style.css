@@ -1,6 +1,49 @@
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/open-sans-v20-latin-regular.eot");
+    src: local(""), url("../fonts/open-sans-v20-latin-regular.eot") format("embedded-opentype"), url("../fonts/open-sans-v20-latin-regular.woff2") format("woff2"), url("../fonts/open-sans-v20-latin-regular.woff") format("woff"), url("../fonts/open-sans-v20-latin-regular.ttf") format("truetype"),
+      url("../fonts/open-sans-v20-latin-regular.svg") format("svg");
+  }
+  @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/open-sans-v20-latin-600.eot");
+    src: local(""), url("../fonts/open-sans-v20-latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans-v20-latin-600.woff2") format("woff2"), url("../fonts/open-sans-v20-latin-600.woff") format("woff"), url("../fonts/open-sans-v20-latin-600.ttf") format("truetype"),
+      url("../fonts/open-sans-v20-latin-600.svg#OpenSans") format("svg");
+  }
+  @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/open-sans-v20-latin-700.eot");
+    src: local(""), url("../fonts/open-sans-v20-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans-v20-latin-700.woff2") format("woff2"), url("../fonts/open-sans-v20-latin-700.woff") format("woff"), url("../fonts/open-sans-v20-latin-700.ttf") format("truetype"),
+      url("../fonts/open-sans-v20-latin-700.svg#OpenSans") format("svg");
+  }
+  @font-face {
+    font-family: "Anton";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/anton-v15-latin-regular.eot");
+    src: local(""), url("../fonts/anton-v15-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/anton-v15-latin-regular.woff2") format("woff2"), url("../fonts/anton-v15-latin-regular.woff") format("woff"), url("../fonts/anton-v15-latin-regular.ttf") format("truetype"),
+      url("../fonts/anton-v15-latin-regular.svg#Anton") format("svg");
+  }
+
 :root {
    --dark-bg: #000000;
    --yellow-bg: #ffc600; 
+}
+
+body {
+    background-color: var(--dark-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Anton", sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2px !important;
 }
 
 #nav-section {
@@ -22,13 +65,19 @@
 }
 
 #subheader-logo {
-    filter: invert(100%);
-    -webkit-filter: invert(100%);
+    -webkit-filter: brightness(0);
+    filter: brightness(0);
     padding-left: 22px;
+}
+
+.sticky-header {
+    webkit-box-shadow: 0px 0px 5px #797979;
+    box-shadow: 0px 0px 5px #797979;
 }
 
 .main {
     background-color: var(--dark-bg);
+    margin-bottom: 50px;
 }
 
 .banner {
@@ -37,15 +86,19 @@
     height: 641px;
 }
 
+.opacity-25 {
+    background-color:rgba(0, 0, 0, 0.5) !important;
+}
+
 .main-footer{
   background-color: var(--dark-bg);
   margin-bottom: 70px;
   color: #ffffff;
+  border-top: 3px var(--yellow-bg) solid;
 }
 
 .sticky-footer {
     background-color: var(--dark-bg) !important;
-    height: 72px;
 }
 
 /* button */
@@ -55,7 +108,77 @@
     border-color: var(--yellow-bg);
 }
 
+.yellow-btn {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #000;
+    background: #ffc600;
+    font-family: "Anton", sans-serif;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.black-btn {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #ffc600;
+    background: #000000;
+    font-family: "Anton", sans-serif;
+    padding: 0.68rem 1.3rem;
+    border-radius: 3px;
+    border: solid 2px #ffc600;
+    text-transform: uppercase;
+}
+
 .primary-button:hover{
     border-color: var(--yellow-bg);
     color: #6c757d;
+}
+
+a:hover{
+    color: var(--yellow-bg)
+}
+
+/* input */
+
+form input:not([type="submit"]):not([type="radio"]) {
+    width: 100% !important;
+    float: left !important;
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    font-weight: normal !important;
+    color: #444444 !important;
+    background: #f9f8f8 !important;
+    border-left: solid 4px #ffc600 !important;
+    padding: 10px !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+} 
+
+
+@media only screen and (max-width: 768px) {
+    .main-header {
+        padding: 10px 10px !important;
+    }
+
+    #subheader-logo {
+        padding-left: 10px !important;
+    }
+
+    #nav-section {
+        padding-left: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .top-nav {
+       display: none !important;
+    }
 }
