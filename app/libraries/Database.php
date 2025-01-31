@@ -1,8 +1,4 @@
 <?php
-namespace app\Libraries;
-
-use PDO;
-use PDOException;
 
 /*
    * PDO Database Class
@@ -52,6 +48,7 @@ class Database
             $this->dbh = new PDO($dsn, $user, $password, $options);
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
+            echo $this->error;
         }
     }
 

@@ -1,8 +1,8 @@
 
-<?php include_once './app/views/header.php'; ?>
+<?php 
+
+include_once './header.php'; 
  
-
-<?php include_once './app/views/main.php'; ?>
+include_once './main.php'; 
     
-
-<?php include_once './app/views/footer.php'; ?>
+include_once './footer.php';

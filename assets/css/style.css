@@ -1,6 +1,6 @@
 :root {
    --dark-bg: #000000;
-   --yellow-bg: #ffc600;
+   --yellow-bg: #ffc600; 
 }
 
 #nav-section {
@@ -28,8 +28,7 @@
 }
 
 .main {
-    background-color: #ddf5dc;
-    height: 600px;
+    background-color: var(--dark-bg);
 }
 
 .banner {
@@ -40,11 +39,23 @@
 
 .main-footer{
   background-color: var(--dark-bg);
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   color: #ffffff;
 }
 
 .sticky-footer {
     background-color: var(--dark-bg) !important;
     height: 72px;
+}
+
+/* button */
+.primary-button{
+    background-color: var(--yellow-bg) !important;
+    color:#000000;
+    border-color: var(--yellow-bg);
+}
+
+.primary-button:hover{
+    border-color: var(--yellow-bg);
+    color: #6c757d;
 }
