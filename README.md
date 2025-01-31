@@ -2,11 +2,11 @@
 Garage door website
 
 # DB setup
-- Go to app/config and change the db credential in app.php
-    define('DB_HOST', 'localhost');
-    define('DB_USER', '');
-    define('DB_PASSWORD', '');
-    define('DB_NAME', '');
+Go to app/config and change the db credential in app.php
+- define('DB_HOST', 'localhost');
+- define('DB_USER', '');
+- define('DB_PASSWORD', '');
+- define('DB_NAME', '');
 
 <div align="center">
     <img src="/screenshots/Screenshot1.png" width="400px"</img>
